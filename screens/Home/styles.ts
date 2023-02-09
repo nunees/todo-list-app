@@ -34,7 +34,7 @@ export const styles = StyleSheet.create({
     width: "100%",
     flexDirection: "row",
     justifyContent: "center",
-    marginVertical: -30,
+    marginTop: -32,
   },
   input: {
     width: 271,
@@ -55,5 +55,71 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: colors.blueDark,
+  },
+
+  tasks: {
+    width: 327,
+    marginTop: 32,
+    alignSelf: "center",
+  },
+
+  info: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    paddingBottom: 20,
+    borderBottomWidth: 1,
+    borderColor: colors.gray400,
+  },
+
+  txtCriadas: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: colors.blue,
+  },
+
+  txtConcluidas: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: colors.purple,
+  },
+
+  criadasCounter: {
+    width: 25,
+    height: 25,
+    color: "white",
+    borderRadius: 999,
+    borderWidth: 1,
+    backgroundColor: colors.gray400,
+  },
+
+  concluidasCounter: {
+    width: 25,
+    height: 25,
+    color: "white",
+    borderRadius: 999,
+    borderWidth: 1,
+    backgroundColor: colors.gray400,
+  },
+
+  todoEmpty: {},
+  clipbordImage: {
+    width: 56,
+    height: 56,
+    marginTop: 46,
+    marginLeft: 135,
+  },
+
+  todoEmptyTitle: {
+    paddingTop: 16,
+    fontSize: 14,
+    fontWeight: "bold",
+    textAlign: "center",
+    color: colors.gray300,
+  },
+
+  todoEmptySubTitle: {
+    fontSize: 14,
+    textAlign: "center",
+    color: colors.gray300,
   },
 });
