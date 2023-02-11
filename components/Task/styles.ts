@@ -77,6 +77,7 @@ export const styles = StyleSheet.create({
     width: 32,
     height: 32,
     marginVertical: 15,
+    marginHorizontal: -10,
   },
 
   deleteTaskActive: {},
