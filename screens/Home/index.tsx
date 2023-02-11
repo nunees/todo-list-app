@@ -24,16 +24,26 @@ export default function Home() {
         </TouchableOpacity>
       </View>
 
-      <View style={styles.tasks}>
-        <View style={styles.info}>
-          <Text style={styles.txtCriadas}>
-            Criadas <Text style={styles.criadasCounter}>{0}</Text>
+      <View style={styles.tasksStatus}>
+        <View style={styles.statusBox}>
+          <Text style={[styles.statusTitle, { color: colors.blue }]}>
+            Criadas
           </Text>
-          <Text style={styles.txtConcluidas}>
-            Concluidas <Text style={styles.concluidasCounter}>{0}</Text>
-          </Text>
+          <View style={styles.countBox}>
+            <Text style={styles.count}>0</Text>
+          </View>
         </View>
+        <View style={styles.statusBox}>
+          <Text style={[styles.statusTitle, { color: colors.purple }]}>
+            Concluídas
+          </Text>
+          <View style={styles.countBox}>
+            <Text style={styles.count}>0</Text>
+          </View>
+        </View>
+      </View>
 
+      <View style={styles.tasks}>
         <View style={styles.todoEmpty}>
           <Image
             style={styles.clipbordImage}
