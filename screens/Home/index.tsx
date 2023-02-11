@@ -1,16 +1,25 @@
+import { useState } from "react";
 import { Image, TextInput, TouchableOpacity, View, Text } from "react-native";
-import Icon from "react-native-vector-icons/AntDesign";
+import Icon from "react-native-vector-icons/Ionicons";
 
+import Logo from "../../assets/images/Logo.png";
+import Task from "../../components/Task";
 import { styles, colors } from "./styles";
 
+interface Props {
+  id: String;
+  isComplete: boolean;
+  task: String;
+}
+
 export default function Home() {
+  const [tasks, setTasks] = useState([]);
+  const [task, setTask] = useState("");
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Image
-          style={styles.logo}
-          source={require("../../assets/images/Logo.png")}
-        />
+        <Image style={styles.logo} source={Logo} />
       </View>
 
       <View style={styles.form}>
@@ -20,7 +29,7 @@ export default function Home() {
           placeholderTextColor={"#808080"}
         />
         <TouchableOpacity style={styles.button}>
-          <Icon name="pluscircleo" size={16} color={colors.gray100} />
+          <Icon name="add-circle-outline" size={25} color={colors.gray100} />
         </TouchableOpacity>
       </View>
 
@@ -43,7 +52,7 @@ export default function Home() {
         </View>
       </View>
 
-      <View style={styles.tasks}>
+      {/* <View style={styles.tasks}>
         <View style={styles.todoEmpty}>
           <Image
             style={styles.clipbordImage}
@@ -56,7 +65,15 @@ export default function Home() {
             Crie tarefas e organize seus itens a fazer
           </Text>
         </View>
-      </View>
+      </View> */}
+
+      <Task
+        id={"someid"}
+        isComplete={true}
+        task={
+          "Integer urna interdum massa libero auctor neque turpis turpis semper."
+        }
+      ></Task>
     </View>
   );
 }
