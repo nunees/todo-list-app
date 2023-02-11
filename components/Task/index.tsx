@@ -7,21 +7,29 @@ interface Props {
   id: string;
   isComplete: boolean;
   task: string;
+  onRemove: () => void;
+  onTaskDone: () => void;
 }
 
-export default function Task({ id, isComplete, task }: Props) {
+export default function Task({
+  id,
+  isComplete,
+  task,
+  onRemove,
+  onTaskDone,
+}: Props) {
   return (
     <View style={styles.container}>
       <TouchableOpacity
+        onPress={() => onTaskDone()}
         style={isComplete ? styles.checkedBox : styles.uncheckedBox}
-      ></TouchableOpacity>
+      >
+        {isComplete && <Icon name="checkmark-outline" color={"#FFF"} />}
+      </TouchableOpacity>
 
       <Text style={isComplete ? styles.taskDone : styles.task}>{task}</Text>
 
-      <TouchableOpacity
-        style={styles.deleteTask}
-        onPress={styles.deleteTaskActive}
-      >
+      <TouchableOpacity style={styles.deleteTask} onPress={() => onRemove()}>
         <Icon style={styles.trash} name="trash-outline" size={20} />
       </TouchableOpacity>
     </View>

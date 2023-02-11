@@ -26,6 +26,7 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     backgroundColor: colors.gray500,
     borderRadius: 8,
+    marginBottom: 8,
   },
   checkedBox: {
     width: 24,
@@ -34,8 +35,7 @@ export const styles = StyleSheet.create({
     marginVertical: 20,
     justifyContent: "center",
     alignItems: "center",
-    borderColor: colors.blue,
-    borderWidth: 3,
+    backgroundColor: colors.purpleDark,
     borderRadius: 999,
   },
   uncheckedBox: {
@@ -46,7 +46,7 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderColor: colors.blue,
-    borderWidth: 3,
+    borderWidth: 2,
     borderRadius: 999,
   },
 
